@@ -48,7 +48,7 @@
 
 .sign-in .div-wrapper {
     align-items: center;
-    background-color: var(--variable-collection-bgcolor);
+    background-color: white;
     border: 1px solid;
     border-color: var(--variable-collection-gray-placeholder);
     border-radius: 5px;
@@ -78,7 +78,7 @@
 
 .sign-in .frame-2 {
     align-items: center;
-    background-color: var(--variable-collection-bgcolor);
+    background-color: white;
     border: 1px solid;
     border-color: var(--variable-collection-gray-placeholder);
     border-radius: 5px;

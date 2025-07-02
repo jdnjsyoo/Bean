@@ -36,6 +36,8 @@
     position: absolute;
     top: 701px;
     width: 556px;
+    background-color: var(--variable-collection-icon-deepgreen);
+    border-radius: 8px;
 }
 
 .sign-up .frame-2 {
@@ -179,7 +181,6 @@
     width: 136px !important;
 }
 
-/* 추가 */
 .input-group {
   display: flex;
   align-items: center;

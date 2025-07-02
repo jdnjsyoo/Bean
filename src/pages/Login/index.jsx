@@ -33,11 +33,12 @@ const SignIn = () => {
 
                 <div className="frame-3">
                     <div className="frame-4">
-                        <div className="text-wrapper-3">로그인</div>
+                        <Link to="/home" className="text-wrapper-3">로그인</Link>
                     </div>
 
                     <div className="frame-5">
-                        <Link to="/signup" className="text-wrapper-4">회원가입</Link></div>
+                        <Link to="/signup" className="text-wrapper-4">회원가입</Link>
+                    </div>
                 </div>
 
                 <div className="text-2">{""}</div>

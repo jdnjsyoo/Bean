@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../../components/Logo";
 import "./style.css";
 import "../../styles/styleguide.css";
+import { Link } from "react-router-dom"
 
 const SignUp = () => {
   return (
@@ -60,7 +61,7 @@ const SignUp = () => {
 
         {/* 버튼 */}
         <div className="group">
-          <div className="signup-button">회원가입하기</div>
+          <Link to="/home" className="signup-button">회원가입하기</Link>
         </div>
       </div>
     </div>

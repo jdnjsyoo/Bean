@@ -7,6 +7,7 @@ import LandingPageBefore from "./pages/Landing/Landing"; // Landing.jsx의 컴�
 import Landing2 from "./pages/Landing/Landing2";
 import SignIn from "./pages/Login"; // Login/index.jsx의 컴포넌트
 import SignUp from "./pages/SignUp";
+import Search from "./pages/Search";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/home" element={<Landing2 />} />
         <Route path="/login" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/search" element={<Search />} />
       </Routes>
     </Router>
   );

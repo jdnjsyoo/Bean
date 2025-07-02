@@ -1,39 +1,20 @@
 import { useState } from 'react'
 import React from "react"
-import Login from "./pages/Login"
 import './App.css'
 
-/*function App() {
-  const [count, setCount] = useState(0)
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LandingPageBefore from "./pages/Landing/Landing"; // Landing.jsx의 컴포넌트
+import { SignIn } from "./pages/Login"; // Login/index.jsx의 컴포넌트
 
+function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPageBefore />} />
+        <Route path="/login" element={<SignIn />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App*/
-
-export default function App() {
-  return <Login />
-}
+export default App;

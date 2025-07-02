@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "../assets/Logo.png";
+import { Link } from "react-router-dom"
 
 const Header = () => {
   return (
@@ -49,14 +50,14 @@ const Header = () => {
             padding: 10,
           }}
         >
-          <div
+          <Link to="/"
             style={{
               position: 'relative',
               fontWeight: 600,
             }}
           >
             로그아웃
-          </div>
+          </Link>
         </div>
       </div>
     </div>

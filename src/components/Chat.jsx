@@ -100,6 +100,7 @@ const Chat = ({
                 fontSize: 15,
                 fontFamily: 'Inter',
                 fontWeight: 400,
+                display: 'flex'
               }}
             >
               추천 검색어
@@ -122,6 +123,7 @@ const Chat = ({
                 fontSize: 15,
                 fontFamily: 'Inter',
                 fontWeight: 400,
+                display: 'flex'
               }}
             >
               최근 검색어

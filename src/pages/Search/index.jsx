@@ -5,6 +5,8 @@ import Chat from '../../components/Chat';
 import './style.css';
 /* dummy data */
 import cafes from  '../../data/cafeDummy';
+import { recommendedKeywords, recentKeywords } from '../../data/searchDummy';
+
 
 const Search = () => {
   return (
@@ -29,7 +31,10 @@ const Search = () => {
           ))}
         </div>
         <div className="right-column">
-          <Chat />
+          <Chat
+            questionText='"합정에서 공부하기 좋은 카페 추천해줘."'
+            recommendedKeywords={recommendedKeywords}
+            recentKeywords={recentKeywords} />
         </div>
       </div>
     </div>

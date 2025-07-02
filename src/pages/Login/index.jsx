@@ -3,6 +3,7 @@ import Logo from "../../components/Logo";
 import line10 from "../../assets/line10.svg";
 import "./style.css";
 import "../../styles/styleguide.css";
+import { Link } from "react-router-dom"
 
 const SignIn = () => {
     return (
@@ -36,8 +37,7 @@ const SignIn = () => {
                     </div>
 
                     <div className="frame-5">
-                        <div className="text-wrapper-4">회원가입</div>
-                    </div>
+                        <Link to="/signup" className="text-wrapper-4">회원가입</Link></div>
                 </div>
 
                 <div className="text-2">{""}</div>

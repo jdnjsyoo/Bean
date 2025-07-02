@@ -8,9 +8,9 @@
 
 .sign-in .div {
     background-color: var(--variable-collection-bgcolor);
-    height: 832px;
+    height: 100vh;
     position: relative;
-    width: 1280px;
+    width: 100vw;
 }
 
 .sign-in .text-wrapper {
@@ -40,24 +40,26 @@
     flex-direction: column;
     gap: 22px;
     left: 0;
+    width: 428px;
+    height: 50px;
     position: absolute;
     top: 0;
-    width: 428px;
 }
 
 .sign-in .div-wrapper {
     align-items: center;
-    align-self: stretch;
-    background-color: #fafaf9;
+    background-color: var(--variable-collection-bgcolor);
     border: 1px solid;
     border-color: var(--variable-collection-gray-placeholder);
     border-radius: 5px;
     display: flex;
     gap: 10px;
-    height: 50px;
-    padding: 36px 56px;
+    height: auto;
+    padding: 16px 56px;
     position: relative;
-    width: 100%;
+    width: 428px;
+    height: 50px;
+    box-sizing: border-box;
 }
 
 .sign-in .text-wrapper-2 {
@@ -76,17 +78,17 @@
 
 .sign-in .frame-2 {
     align-items: center;
-    align-self: stretch;
-    background-color: #fbfafa;
+    background-color: var(--variable-collection-bgcolor);
     border: 1px solid;
     border-color: var(--variable-collection-gray-placeholder);
     border-radius: 5px;
     display: flex;
     gap: 10px;
     height: 50px;
-    padding: 36px 56px;
+    width: 428px;
+    padding: 16px 56px;
     position: relative;
-    width: 100%;
+    box-sizing: border-box;
 }
 
 .sign-in .text {
@@ -124,9 +126,10 @@
     gap: 10px;
     height: 50px;
     justify-content: center;
-    padding: 36px 56px;
+    padding: 26px 56px;
     position: relative;
-    width: 100%;
+    width: 428px;
+    box-sizing: border-box;
 }
 
 .sign-in .text-wrapper-3 {
@@ -153,9 +156,10 @@
     gap: 10px;
     height: 50px;
     justify-content: center;
-    padding: 36px 56px;
+    padding: 26px 56px;
     position: relative;
-    width: 100%;
+    width: 428px;
+    box-sizing: border-box;
 }
 
 .sign-in .text-wrapper-4 {
@@ -227,4 +231,15 @@
     left: 30px !important;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.sign-in .input-text {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    font-size: 17px;
+    font-family: "Inter-Regular", Helvetica;
+    color: var(--variable-collection-gray-placeholder);
+    outline: none;
 }

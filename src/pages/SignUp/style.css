@@ -1,0 +1,214 @@
+.sign-up {
+    background-color: #f4f0e5;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.sign-up .div-2 {
+    background-color: var(--variable-collection-bgcolor);
+    height: 100vh;
+    position: relative;
+    width: 100vw;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.sign-up .text-wrapper-4 {
+    color: #000000;
+    font-family: "Inter-Bold", Helvetica;
+    font-size: 28px;
+    font-weight: 700;
+    left: 538px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 105px;
+    width: 203px;
+}
+
+.sign-up .group {
+    height: 50px;
+    left: 362px;
+    position: absolute;
+    top: 701px;
+    width: 556px;
+}
+
+.sign-up .frame-2 {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    height: 50px;
+    justify-content: center;
+    padding: 11px 207px;
+    position: relative;
+    width: 556px;
+}
+
+.sign-up .signup-button {
+    width: 556px;
+    height: 50px;
+    background-color: var(--variable-collection-icon-deepgreen);
+    color: white;
+    border-radius: 8px;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 50px;
+    margin: 0 auto; /* 가운데 정렬 */
+}
+
+.sign-up .frame-3 {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    left: 352px;
+    position: absolute;
+    top: 181px;
+    width: 576px;
+}
+
+.sign-up .text-wrapper-6 {
+    align-self: stretch;
+    color: #000000;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 13px;
+    font-weight: 400;
+    height: 17px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    text-align: right;
+}
+
+.sign-up .frame-4 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 새로운 input form 스타일 */
+.sign-up .form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.sign-up .form-label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.sign-up .form-input {
+    height: 45px;
+    padding: 10px 12px;
+    border: 1px solid var(--variable-collection-gray-placeholder);
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: "Inter-Regular", Helvetica;
+}
+
+.sign-up .frame-5 {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+}
+
+.sign-up .frame-6 {
+    display: inline-flex;
+    gap: 1px;
+}
+
+.sign-up .text-wrapper-7 {
+    color: #000000;
+    font-family: "Inter-Medium", Helvetica;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.sign-up .frame-7 {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    height: 46px;
+    width: 389px;
+}
+
+.sign-up .frame-8 {
+    align-items: center;
+    border: 1px solid var(--variable-collection-gray-placeholder);
+    border-radius: 5px;
+    display: flex;
+    flex-grow: 1;
+    padding: 10px 12px;
+    height: 45px;
+}
+
+.sign-up .frame-9 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.sign-up .p {
+    color: var(--variable-collection-gray-placeholder);
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+}
+
+.sign-up .logo-instance {
+    background-image: url(./image.png) !important;
+    height: 55px !important;
+    left: 30px !important;
+    position: absolute !important;
+    top: 20px !important;
+    width: 136px !important;
+}
+
+/* 추가 */
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  width: 556px;
+}
+
+.input-group label {
+  width: 120px;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  text-align: left;
+}
+
+.input-group .required {
+  color: black;
+  margin-left: 4px;
+}
+
+.input-group input {
+  flex-grow: 1;
+  height: 45px;
+  padding: 0 16px;
+  border: 1px solid var(--variable-collection-gray-placeholder);
+  border-radius: 5px;
+  font-size: 15px;
+  font-family: "Inter-Regular", Helvetica;
+  background-color: var(--variable-collection-bgcolor);
+}

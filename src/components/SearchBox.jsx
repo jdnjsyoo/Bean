@@ -1,12 +1,31 @@
-import React from "react";
+import { React, useState } from "react";
 import chatIcon from "../assets/chat-symbol.svg";
 import sendIcon from "../assets/send-symbol.svg";
+import { useNavigate } from "react-router-dom";
 
 const SearchBox = () => {
+  const [inputValue, setInputValue] = useState("");
+  const navigate = useNavigate();
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      if (inputValue.trim()) {
+        navigate(`/search?q=${encodeURIComponent(inputValue)}`);
+      }
+    }
+  };
+
   return (
     <div style={styles.container}>
       <img src={chatIcon} alt="chat icon" style={styles.icon} />
-      <input style={styles.input} placeholder="어떤 카페를 찾고 계신가요?" />
+      <input
+        type="text"
+        style={styles.input}
+        value={inputValue}
+        placeholder="어떤 카페를 찾고 계신가요?"
+        onKeyDown={handleKeyDown}
+        onChange={(e) => setInputValue(e.target.value)}
+      />
       <img src={sendIcon} alt="send icon" style={styles.icon} />
     </div>
   );

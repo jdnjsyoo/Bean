@@ -1,47 +1,47 @@
-import React, { useState } from 'react';
-import './CafeDetail.css';
-import Rate from '../RateDisplay';
-import arrowDown from '../../assets/ep_arrow-down.svg';
-import mapIcon from '../../assets/carbon_map.svg';
-import clockIcon from '../../assets/mdi_clock.svg';
-import wonIcon from '../../assets/mingcute-currency-won-line.svg';
-import notebookIcon from '../../assets/stash_notebook.svg';
-import tableIcon from '../../assets/hugeicons-table-round.svg';
-import coffeeIcon from '../../assets/ep_coffee.svg';
-import lineIcon from '../../assets/Line 5.png';
-import closeIcon from '../../assets/material-close.svg';
-import WaitingPage from '../WaitingPage';
-import WaitingPage2 from '../WaitingPage2';
+import React, { useState, useEffect } from "react";
+import "./CafeDetail.css";
+import Rate from "../RateDisplay";
+import arrowDown from "../../assets/ep_arrow-down.svg";
+import mapIcon from "../../assets/carbon_map.svg";
+import clockIcon from "../../assets/mdi_clock.svg";
+import wonIcon from "../../assets/mingcute-currency-won-line.svg";
+import notebookIcon from "../../assets/stash_notebook.svg";
+import tableIcon from "../../assets/hugeicons-table-round.svg";
+import coffeeIcon from "../../assets/ep_coffee.svg";
+import lineIcon from "../../assets/Line 5.png";
+import closeIcon from "../../assets/material-close.svg";
+import WaitingPage from "../WaitingPage";
+import WaitingPage2 from "../WaitingPage2";
 
-const Container = ( {children}) => {
-return(
-  <div className='image-box'>
-    {children}
-  </div>
-)
-}
+const Container = ({ children }) => {
+  return <div className="image-box">{children}</div>;
+};
 
-const CafeDetail = () => {
-  const [phase, setPhase] = useState('info');
+const CafeDetail = ({ cafe }) => {
+  const [phase, setPhase] = useState("info");
 
-  const goWaiting = () => setPhase('waiting')
+  const goWaiting = () => setPhase("waiting");
   const goConfirm = () => {
-    console.log('go confirm')
-    setPhase('confirm')
-  }
-  
+    console.log("go confirm");
+    setPhase("confirm");
+  };
 
-  if(phase === 'info') {
+  if (phase === "info") {
     return (
-    <Container>
-        <div className="image-slider">
+      <Container>
+        <div
+          className="image-slider"
+          style={{ backgroundImage: `url(${cafe.photo_urls[0]})` }}
+        >
           <img className="material-close" alt="" src={closeIcon} />
         </div>
         <div className="frame-group">
           <div className="frame-container">
             <div className="frame-div">
               <div className="wrapper">
-                <div className="div-text" style={{fontSize: 24}}>카페블라블라</div>
+                <div className="div-text" style={{ fontSize: 24 }}>
+                  {cafe.name}
+                </div>
               </div>
               <div className="frame-parent1">
                 <Rate />
@@ -55,20 +55,24 @@ const CafeDetail = () => {
               </div>
               <div className="frame-parent4">
                 <div className="mingcutecurrency-won-line-parent">
-                  <img className="mingcutecurrency-won-line-icon" alt="" src={wonIcon} />
+                  <img
+                    className="mingcutecurrency-won-line-icon"
+                    alt=""
+                    src={wonIcon}
+                  />
                   <div className="div5">아메리카노 4,500원</div>
                 </div>
                 <div className="mdiclock-parent">
                   <img className="mdiclock-icon" alt="" src={clockIcon} />
                   <div className="parent">
-                    <div className="div6">영업종료</div>
+                    <div className="div6">영업중</div>
                     <div className="div7">오늘(월) 12:00 ~ 18:00</div>
                   </div>
                 </div>
                 <div className="carbonmap-parent">
                   <img className="carbonmap-icon" alt="" src={mapIcon} />
                   <div className="dropdown-menu-wrapper">
-                    <div className="div8">서울 관악구 관악로13길 20</div>
+                    <div className="div8">{cafe.address}</div>
                   </div>
                 </div>
               </div>
@@ -79,19 +83,25 @@ const CafeDetail = () => {
           <div className="group-parent">
             <div className="rectangle-parent">
               <div className="group-child" />
-              <div className="div9">카공맛집</div>
+              <div className="div9">{cafe.keywords.slice(0, 5)[0].content}</div>
             </div>
             <div className="rectangle-group">
               <div className="group-item" />
-              <div className="div10">에그타르트</div>
+              <div className="div10">
+                {cafe.keywords.slice(0, 5)[1].content}
+              </div>
             </div>
             <div className="rectangle-container">
               <div className="group-inner" />
-              <div className="div11">수제쿠키</div>
+              <div className="div11">
+                {cafe.keywords.slice(0, 5)[2].content}
+              </div>
             </div>
             <div className="rectangle-container">
               <div className="group-inner" />
-              <div className="div12">주차 가능</div>
+              <div className="div12">
+                {cafe.keywords.slice(0, 5)[3].content}
+              </div>
             </div>
           </div>
         </div>
@@ -145,12 +155,20 @@ const CafeDetail = () => {
                 <div className="frame-wrapper" onClick={goWaiting}>
                   <div className="frame-parent10">
                     <div className="hugeiconstable-round-parent">
-                      <img className="hugeiconstable-round" alt="" src={tableIcon} />
+                      <img
+                        className="hugeiconstable-round"
+                        alt=""
+                        src={tableIcon}
+                      />
                       <div className="div">매장 이용</div>
                     </div>
                     <div className="parent2">
                       <div className="div4">1팀</div>
-                      <img className="eparrow-down-icon" alt="" src={arrowDown} />
+                      <img
+                        className="eparrow-down-icon"
+                        alt=""
+                        src={arrowDown}
+                      />
                     </div>
                   </div>
                 </div>
@@ -158,12 +176,20 @@ const CafeDetail = () => {
                 <div className="frame-wrapper" onClick={goWaiting}>
                   <div className="frame-parent11">
                     <div className="hugeiconstable-round-parent">
-                      <img className="hugeiconstable-round" alt="" src={coffeeIcon} />
+                      <img
+                        className="hugeiconstable-round"
+                        alt=""
+                        src={coffeeIcon}
+                      />
                       <div className="div">테이크아웃</div>
                     </div>
                     <div className="parent2">
                       <div className="div4">0팀</div>
-                      <img className="eparrow-down-icon" alt="" src={arrowDown} />
+                      <img
+                        className="eparrow-down-icon"
+                        alt=""
+                        src={arrowDown}
+                      />
                     </div>
                   </div>
                 </div>
@@ -172,7 +198,7 @@ const CafeDetail = () => {
           </div>
         </div>
 
-        {/* 지도 */}
+        {/* 지도
         <div className="frame-parent12">
           <div className="wrapper2">
             <div className="div24">매장 위치</div>
@@ -180,29 +206,42 @@ const CafeDetail = () => {
           <div className="rectangle-wrapper">
             <div className="frame-inner" />
           </div>
+        </div> */}
+        {/* 매장 설명 */}
+        <div className="frame-parent12">
+          <div className="wrapper2">
+            <div className="div24">매장 설명</div>
+          </div>
+          <div className="rectangle-wrapper">
+            <div
+              style={{
+                fontSize: 14,
+                lineHeight: "1.6",
+                color: "#333",
+                whiteSpace: "pre-wrap", // 줄바꿈 있는 경우 대응
+              }}
+            >
+              {cafe?.description || "설명 정보가 없습니다."}
+            </div>
+          </div>
         </div>
-      
-    </Container>
-  )
-    
+      </Container>
+    );
   }
 
-  if(phase === 'waiting') {
-    return(
+  if (phase === "waiting") {
+    return (
       <Container>
         <WaitingPage onGoToNextButtonClick={goConfirm} />
       </Container>
-    )
-  }
-  
-  else {
+    );
+  } else {
     return (
       <Container>
         <WaitingPage2 />
       </Container>
-    )
+    );
   }
-}
-
+};
 
 export default CafeDetail;

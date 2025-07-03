@@ -1,18 +1,20 @@
-import { React, useState } from 'react';
-import { recommendedKeywords, recentKeywords } from '../data/searchDummy';
-import { useNavigate } from 'react-router-dom';
+import { React, useState } from "react";
+import { recommendedKeywords, recentKeywords } from "../data/searchDummy";
+import { useNavigate } from "react-router-dom";
 
 const Chat = ({
   questionText,
   recommendedKeywords = [],
   recentKeywords = [],
+  onClick = () => {},
 }) => {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
   const navigate = useNavigate();
 
   const handleKeyDown = (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       if (inputValue.trim()) {
+        onClick(inputValue);
         navigate(`/search?q=${encodeURIComponent(inputValue)}`);
       }
     }
@@ -22,39 +24,39 @@ const Chat = ({
     <div
       className="chat-container"
       style={{
-        width: '450px',
-        height: '710px',
-        padding: '2px 38px',
-        background: 'var(--chatbot_bg, #D8E4DA)',
+        width: "450px",
+        height: "710px",
+        padding: "2px 38px",
+        background: "var(--chatbot_bg, #D8E4DA)",
         borderRadius: 10,
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'flex-end',
-        alignItems: 'center',
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "flex-end",
+        alignItems: "center",
         gap: 155,
       }}
     >
       {/* 질문 텍스트 */}
       <div
         style={{
-          alignSelf: 'stretch',
+          alignSelf: "stretch",
           height: 70.94,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
           gap: 6,
         }}
       >
         <div
           style={{
             width: 279,
-            textAlign: 'center',
-            color: 'black',
+            textAlign: "center",
+            color: "black",
             fontSize: 24,
-            fontFamily: 'Inter',
+            fontFamily: "Inter",
             fontWeight: 600,
-            wordWrap: 'break-word',
+            wordWrap: "break-word",
           }}
         >
           {questionText}
@@ -65,28 +67,28 @@ const Chat = ({
       <div
         style={{
           width: 530,
-          padding: '30px 40px',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'flex-start',
-          alignItems: 'flex-start',
+          padding: "30px 40px",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "flex-start",
+          alignItems: "flex-start",
           gap: 40,
         }}
       >
         {/* 검색 입력창 */}
         <div
           style={{
-            width: '424px',
-            height: '33px',
-            padding: '14px 13px 13px',
-            background: '#ECECEC',
+            width: "424px",
+            height: "33px",
+            padding: "14px 13px 13px",
+            background: "#ECECEC",
             borderRadius: 10,
-            display: 'flex',
-            alignItems: 'center',
-            margin: '0 auto'
+            display: "flex",
+            alignItems: "center",
+            margin: "0 auto",
           }}
         >
-          <div style={{ display: 'flex', alignItems: 'center'}}>
+          <div style={{ display: "flex", alignItems: "center" }}>
             <input
               type="text"
               placeholder="검색어를 입력하세요."
@@ -94,37 +96,44 @@ const Chat = ({
               onChange={(e) => setInputValue(e.target.value)}
               onKeyDown={handleKeyDown}
               style={{
-                border: 'none',
-                outline: 'none',
-                background: 'transparent',
+                border: "none",
+                outline: "none",
+                background: "transparent",
                 fontSize: 15,
-                fontFamily: 'Inter',
-                color: '#8C8C8C',
-                padding: '10px',
-                width: '400px',
+                fontFamily: "Inter",
+                color: "#8C8C8C",
+                padding: "10px",
+                width: "400px",
               }}
             />
           </div>
         </div>
 
         {/* 추천 검색어 */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 15, alignSelf: 'center' }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: 15,
+            alignSelf: "center",
+          }}
+        >
           <div>
             <div
               style={{
                 height: 18,
-                color: 'black',
+                color: "black",
                 fontSize: 15,
-                fontFamily: 'Inter',
+                fontFamily: "Inter",
                 fontWeight: 400,
-                display: 'flex'
+                display: "flex",
               }}
             >
               추천 검색어
             </div>
-            <div style={{ display: 'flex', gap: 10, marginTop: 10 }}>
+            <div style={{ display: "flex", gap: 10, marginTop: 10 }}>
               {recommendedKeywords.map((text, idx) => (
-                <div key={idx} style={tagStyle('#1C6A28')}>
+                <div key={idx} style={tagStyle("#1C6A28")}>
                   {text}
                 </div>
               ))}
@@ -136,18 +145,18 @@ const Chat = ({
             <div
               style={{
                 height: 18,
-                color: 'black',
+                color: "black",
                 fontSize: 15,
-                fontFamily: 'Inter',
+                fontFamily: "Inter",
                 fontWeight: 400,
-                display: 'flex'
+                display: "flex",
               }}
             >
               최근 검색어
             </div>
-            <div style={{ display: 'flex', gap: 10, marginTop: 10 }}>
+            <div style={{ display: "flex", gap: 10, marginTop: 10 }}>
               {recentKeywords.map((text, idx) => (
-                <div key={idx} style={tagStyle('#0A4C14')}>
+                <div key={idx} style={tagStyle("#0A4C14")}>
                   {text}
                 </div>
               ))}
@@ -163,12 +172,12 @@ const tagStyle = (bgColor) => ({
   padding: 10,
   background: bgColor,
   borderRadius: 10,
-  border: '1px solid white',
-  color: 'white',
+  border: "1px solid white",
+  color: "white",
   fontSize: 15,
-  fontFamily: 'Inter',
+  fontFamily: "Inter",
   fontWeight: 400,
-  textAlign: 'center',
+  textAlign: "center",
 });
 
 export default Chat;

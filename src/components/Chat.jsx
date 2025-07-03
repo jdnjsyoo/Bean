@@ -1,11 +1,23 @@
-import React from 'react';
+import { React, useState } from 'react';
 import { recommendedKeywords, recentKeywords } from '../data/searchDummy';
+import { useNavigate } from 'react-router-dom';
 
 const Chat = ({
   questionText,
   recommendedKeywords = [],
   recentKeywords = [],
 }) => {
+  const [inputValue, setInputValue] = useState('');
+  const navigate = useNavigate();
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      if (inputValue.trim()) {
+        navigate(`/search?q=${encodeURIComponent(inputValue)}`);
+      }
+    }
+  };
+
   return (
     <div
       className="chat-container"
@@ -78,6 +90,9 @@ const Chat = ({
             <input
               type="text"
               placeholder="검색어를 입력하세요."
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              onKeyDown={handleKeyDown}
               style={{
                 border: 'none',
                 background: 'transparent',

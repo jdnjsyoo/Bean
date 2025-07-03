@@ -1,10 +1,19 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { React, useState} from "react";
+import { Link, useNavigate } from "react-router-dom";
 import login from "../../assets/login.png";
 import search from "../../assets/material-symbol_search.svg";
 import "./Landing2.css";
 
 const Landing2 = () => {
+  const [query, setQuery] = useState("");
+  const navigate = useNavigate(); 
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      navigate(`/search?q=${encodeURIComponent(query)}`);
+    }
+  };
+  
   return (
     <div className="landing2">
       <div className="landing2-overlap-group-wrapper">
@@ -27,6 +36,9 @@ const Landing2 = () => {
                 type="text"
                 className="landing2-search-input"
                 placeholder="합정에서 공부하기 좋은 카페 추천해줘"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                onKeyDown={handleKeyDown}
               />
             </div>
           </div>

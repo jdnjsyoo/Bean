@@ -1,16 +1,41 @@
-import React from 'react';
-import Header from '../../components/Header';
-import CafeCard from '../../components/CafeCard';
-import CafeDetail from '../../components/CafeDetail/CafeDetail';
-import SearchBox from '../../components/SearchBox';
-import './style.css';
+import React, { useEffect, useState } from "react";
+import Header from "../../components/Header";
+import CafeCard from "../../components/CafeCard";
+import CafeDetail from "../../components/CafeDetail/CafeDetail";
+import SearchBox from "../../components/SearchBox";
+import "./style.css";
 /* dummy data */
-import cafes from  '../../data/cafeDummy';
+// import cafes from "../../data/cafeDummy";
+// import WaitingNotice from "../../components/WaitingNotice";
+import axios from "axios";
 
 const HomeDetail = () => {
+  const [cafes, setCafes] = useState([]);
+  const [loading, setLoading] = useState(true); // optional
+  const [error, setError] = useState(null); // optional
+
+  useEffect(() => {
+    const fetchCafes = async () => {
+      try {
+        const response = await axios.get("http://localhost:8000/api/cafes/");
+        setCafes(response.data);
+      } catch (err) {
+        console.error("Error fetching cafes:", err);
+        setError(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchCafes();
+  }, []);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error loading cafes.</div>;
+
   return (
     <div className="search-page">
-      <Header/>
+      <Header />
       <div className="content-container">
         <div className="left-column">
           {cafes.map((cafe, index) => (
@@ -30,8 +55,9 @@ const HomeDetail = () => {
           ))}
         </div>
         <div className="right-column">
-          <SearchBox/>
-          <CafeDetail/>
+          <SearchBox />
+          {/* <WaitingNotice /> */}
+          <CafeDetail />
         </div>
       </div>
     </div>

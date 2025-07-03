@@ -27,7 +27,7 @@ const CafeCard = ({
             height: '20px',
           }}
         >
-          빈자리 : {emptySeats} / {totalSeats}
+          빈자리 : <span style={{ color: 'red' }}>{emptySeats}</span> / {totalSeats}
         </div>
       </div>
 

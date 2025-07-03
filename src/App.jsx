@@ -11,6 +11,7 @@ import Search from "./pages/Search";
 import HomeDetail from "./pages/Home_Detail";
 import WaitingPage from "./components/WaitingPage";
 import WaitingPage2 from "./components/WaitingPage2";
+import WaitingNotice from "./components/WaitingNotice";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/detail" element={<HomeDetail />} />
         <Route path="/waiting" element={<WaitingPage />} />
         <Route path="/waiting2" element={<WaitingPage2 />} />
+        <Route path="/notice" element={<WaitingNotice />} />
       </Routes>
     </Router>
   );

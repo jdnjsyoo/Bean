@@ -1,7 +1,7 @@
 .search-page {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   background-color: #f4f0e5;}
 
 .content-container {

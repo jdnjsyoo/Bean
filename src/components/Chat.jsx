@@ -10,7 +10,7 @@ const Chat = ({
     <div
       className="chat-container"
       style={{
-        width: '530px',
+        width: '450px',
         height: '710px',
         padding: '2px 38px',
         background: 'var(--chatbot_bg, #D8E4DA)',
@@ -64,14 +64,14 @@ const Chat = ({
         {/* 검색 입력창 */}
         <div
           style={{
-            width: '504px',
+            width: '424px',
             height: '33px',
             padding: '14px 13px 13px',
             background: '#ECECEC',
             borderRadius: 10,
             display: 'flex',
-            justifyContent: 'center',
             alignItems: 'center',
+            margin: '0 auto'
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center'}}>
@@ -91,7 +91,7 @@ const Chat = ({
         </div>
 
         {/* 추천 검색어 */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 15, alignSelf: 'stretch' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 15, alignSelf: 'center' }}>
           <div>
             <div
               style={{

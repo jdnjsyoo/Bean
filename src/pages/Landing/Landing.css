@@ -51,7 +51,7 @@
     width: fit-content;
 }
 
-.landing-page-before .frame-wrapper {
+.landing-page-before .landing-frame-wrapper {
     background-color: #f4f0e5cc;
     box-shadow: 4px 4px 4px #00000066;
     height: 339px;
@@ -62,7 +62,7 @@
     width: 770px;
 }
 
-.landing-page-before .image-wrapper {
+.landing-page-before .landing-image-wrapper {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
@@ -74,7 +74,7 @@
     width: 308px;
 }
 
-.landing-page-before .image {
+.landing-page-before .landing-image {
     align-self: stretch;
     height: 214px;
     object-fit: cover;

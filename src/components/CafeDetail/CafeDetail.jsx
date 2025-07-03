@@ -1,6 +1,6 @@
 import React from 'react';
 import './CafeDetail.css';
-import RatingTag from '../RatingTag/RatingTag';
+import Rate from '../RateDisplay';
 import arrowDown from '../../assets/ep_arrow-down.svg';
 import mapIcon from '../../assets/carbon_map.svg';
 import clockIcon from '../../assets/mdi_clock.svg';
@@ -23,19 +23,11 @@ const CafeDetail = () => {
         <div className="frame-container">
           <div className="frame-div">
             <div className="wrapper">
-              <div className="div">카페블라블라</div>
+              <div className="div-text" style={{fontSize: 24}}>카페블라블라</div>
             </div>
             <div className="frame-parent1">
-              <div className="frame-parent2">
-                <div className="vector-parent">
-                  <img className="vector-icon" alt="" src={vectorIcon} />
-                  <div className="div2">
-                    <span className="span">4.9</span>
-                    <span className="span1">(1,067)</span>
-                  </div>
-                </div>
-              </div>
-              <div className="div3">{`전체 리뷰 1,503개  >`}</div>
+              <Rate />
+              <div className="div3-detail">{`전체 리뷰 1,503개  >`}</div>
             </div>
           </div>
 

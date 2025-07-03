@@ -30,7 +30,7 @@ body {
   	box-sizing: border-box;
 }
 
-.div {
+.div-text {
   	position: relative;
   	line-height: 30px;
   	font-weight: 600;
@@ -46,6 +46,7 @@ body {
 .div1 {
   	flex: 1;
   	position: relative;
+		flex-direction: row;
   	line-height: 15px;
   	font-weight: 500;
 }
@@ -107,15 +108,17 @@ body {
   	justify-content: flex-start;
   	gap: 7px;
 }
-.div3 {
+.div3-detail {
   	position: relative;
-  	line-height: 30px;
+		width: 170px;
   	font-weight: 500;
   	font-family: Inter;
-  	white-space: pre-wrap;
+  	/*white-space: pre-wrap; */
 }
+
 .frame-parent1 {
   	align-self: stretch;
+		height: 29px;
   	display: flex;
   	flex-direction: row;
   	align-items: flex-end;

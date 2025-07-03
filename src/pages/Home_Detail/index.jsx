@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../../components/Header';
 import CafeCard from '../../components/CafeCard';
 import CafeDetail from '../../components/CafeDetail/CafeDetail';
-import Searchbox from '../../components/SearchBox';
+import SearchBox from '../../components/SearchBox';
 import './style.css';
 /* dummy data */
 import cafes from  '../../data/cafeDummy';
@@ -30,7 +30,8 @@ const HomeDetail = () => {
           ))}
         </div>
         <div className="right-column">
-          <CafeDetail />
+          <SearchBox/>
+          <CafeDetail/>
         </div>
       </div>
     </div>

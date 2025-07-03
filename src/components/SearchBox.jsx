@@ -1,6 +1,6 @@
 import React from 'react';
-import chatIcon from '../../assets/send-symbol.svg';
-import sendIcon from '../../assets/send-symbol.svg';
+import chatIcon from '../assets/chat-symbol.svg';
+import sendIcon from '../assets/send-symbol.svg';
 
 const SearchBox = () => {
   return (
@@ -11,7 +11,7 @@ const SearchBox = () => {
           alt="chat icon"
           style={styles.chatIcon}
         />
-        <div style={styles.text}>어떤 카페를 찾고 계신가요?</div>
+        <input style={styles.text} placeholder="어떤 카페를 찾고 계신가요?" />
       </div>
       <img
         src={sendIcon}
@@ -55,7 +55,12 @@ const styles = {
   },
   text: {
     position: 'relative',
+    backgroundColor: '#d8e4da',
+    padding: '5px',
+    border: 'none',
+    width: '300px'
   },
+
   sendIcon: {
     width: 20,
     maxHeight: '100%',

@@ -6,9 +6,10 @@ const Header = () => {
   return (
     <div
       style={{
+        position: 'fixed',
         width: '100%',
-        position: 'relative',
         backgroundColor: '#f4f0e5',
+        fill: '#f4f0e5',
         height: 100,
         display: 'flex',
         flexDirection: 'row',

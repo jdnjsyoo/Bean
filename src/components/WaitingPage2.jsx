@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+import WaitingNotice from "./WaitingNotice";
 import { useNavigate } from "react-router-dom";
 
 const WaitingPage2 = () => {
+  const [showNotice, setShowNotice] = useState(false);
   const navigate = useNavigate();
 
   const handleBack = () => {
     navigate(-1); // 이전 페이지로 이동
+  };
+
+  const handleRegister = () => {
+    setShowNotice(true);
+    // console.log("🔔 showNotice = true");
+
+    setTimeout(() => {
+      setShowNotice(false);
+      // console.log("🕒 showNotice = false");
+    }, 3000);
   };
 
   const cafeName = "카페블라블라";
@@ -189,6 +201,7 @@ const WaitingPage2 = () => {
 
         {/* 버튼 */}
         <button
+          onClick={handleRegister} // 등록 버튼 핸들러 연결
           style={{
             marginTop: 12,
             width: "100%",

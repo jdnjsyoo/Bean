@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import login from "../../assets/login.png";
 import "./Landing.css";
 
-
 const LandingPageBefore = () => {
   return (
     <div className="landing-page-before">
@@ -12,11 +11,15 @@ const LandingPageBefore = () => {
           <div className="frame">
             <>
               <div className="div-wrapper">
-                <Link to="/login" className="text-wrapper">로그인</Link>
+                <Link to="/login" className="text-wrapper">
+                  로그인
+                </Link>
               </div>
 
               <div className="div-wrapper">
-                <Link to="/signup" className="text-wrapper">회원가입</Link>
+                <Link to="/signup" className="text-wrapper">
+                  회원가입
+                </Link>
               </div>
             </>
           </div>

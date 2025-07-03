@@ -8,6 +8,7 @@ import Landing2 from "./pages/Landing/Landing2";
 import SignIn from "./pages/Login"; // Login/index.jsx의 컴포넌트
 import SignUp from "./pages/SignUp";
 import Search from "./pages/Search";
+import HomeDetail from './pages/Home_Detail';
 import WaitingPage from "./components/WaitingPage";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/login" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/search" element={<Search />} />
+        <Route path="/detail" element={<HomeDetail />} />
         <Route path="/waiting" element={<WaitingPage />} />
       </Routes>
     </Router>

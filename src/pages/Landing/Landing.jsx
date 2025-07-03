@@ -24,9 +24,9 @@ const LandingPageBefore = () => {
             </>
           </div>
 
-          <div className="frame-wrapper">
-            <div className="image-wrapper">
-              <img className="image" alt="Image" src={login} />
+          <div className="landing-frame-wrapper">
+            <div className="landing-image-wrapper">
+              <img className="landing-image" alt="Image" src={login} />
             </div>
           </div>
         </div>

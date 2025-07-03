@@ -1,0 +1,113 @@
+.landing2 {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.landing2 .landing2-overlap-group-wrapper {
+    background-color: #ffffff;
+    height: 832px;
+    width: 1280px;
+}
+
+.landing2 .landing2-overlap-group {
+    background-image: url(./background.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 832px;
+    position: relative;
+}
+
+.landing2 .landing2-frame {
+    position: absolute;
+    top: 30px;
+    right: 32px; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto;
+}
+
+.landing2 .landing2-div-wrapper {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+}
+
+.landing2 .landing2-text-wrapper {
+    color: #ffffff;
+    font-family: "Inter", Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+}
+
+.landing2 .landing2-frame-wrapper {
+    background-color: #f4f0e5cc;
+    box-shadow: 4px 4px 4px #00000066;
+    height: 339px;
+    left: 255px;
+    opacity: 0.8;
+    position: absolute;
+    top: 247px;
+    width: 770px;
+}
+
+.landing2 .landing2-image-wrapper {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    left: 231px;
+    padding: 5px;
+    position: relative;
+    top: 2px;
+    width: 308px;
+}
+
+.landing2 .landing2-image {
+    align-self: stretch;
+    height: 214px;
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+}
+
+.landing2 .landing2-search-bar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #d9d8d8;
+    padding: 16px 24px;
+    border-radius: 8px;
+    width: 600px;
+    margin: 10px 60px;
+    gap: 16px;
+}
+
+.landing2 .landing2-search-icon {
+    width: 28px;
+    height: 28px;
+}
+
+.landing2 .landing2-search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: #5c5b5b;
+    font-family: "Inter", sans-serif;
+    background-color: transparent;
+}

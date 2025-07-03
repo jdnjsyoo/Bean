@@ -1,0 +1,11 @@
+:root {
+    --variable-collection-background: rgba(220, 240, 223, 1);
+    --variable-collection-bgcolor: rgba(244, 240, 229, 1);
+    --variable-collection-chatbot-bg: rgba(216, 228, 218, 1);
+    --variable-collection-gray-placeholder: rgba(140, 140, 140, 1);
+    --variable-collection-greencolor: rgba(183, 203, 186, 1);
+    --variable-collection-icon-deepgreen: rgba(10, 76, 20, 1);
+    --variable-collection-lightest-gray: rgba(246, 246, 246, 1);
+    --variable-collection-lightgreen: rgba(205, 231, 209, 1);
+    --variable-collection-theme-color: rgba(28, 106, 40, 1);
+}

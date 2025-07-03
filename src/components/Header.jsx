@@ -10,7 +10,7 @@ const Header = () => {
         width: '100%',
         backgroundColor: '#f4f0e5',
         fill: '#f4f0e5',
-        height: 100,
+        height: '80px',
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
@@ -22,6 +22,7 @@ const Header = () => {
         fontSize: 15,
         color: '#000',
         fontFamily: 'Inter',
+        zIndex:2,
       }}
     >
       <img

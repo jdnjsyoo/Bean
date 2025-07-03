@@ -10,7 +10,7 @@ import cafes from  '../../data/cafeDummy';
 const HomeDetail = () => {
   return (
     <div className="search-page">
-      <Header />
+      <Header/>
       <div className="content-container">
         <div className="left-column">
           {cafes.map((cafe, index) => (

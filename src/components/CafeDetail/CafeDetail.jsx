@@ -1,5 +1,6 @@
 import React from 'react';
 import './CafeDetail.css';
+import RatingTag from '../RatingTag/RatingTag';
 import arrowDown from '../../assets/ep_arrow-down.svg';
 import mapIcon from '../../assets/carbon_map.svg';
 import clockIcon from '../../assets/mdi_clock.svg';
@@ -26,12 +27,6 @@ const CafeDetail = () => {
             </div>
             <div className="frame-parent1">
               <div className="frame-parent2">
-                <div className="dropdown-menu-wrapper">
-                  <div className="dropdown-menu">
-                    <div className="div1">별점태그</div>
-                    <img className="dropdown-menu-child" alt="" src={vector1Icon} />
-                  </div>
-                </div>
                 <div className="vector-parent">
                   <img className="vector-icon" alt="" src={vectorIcon} />
                   <div className="div2">

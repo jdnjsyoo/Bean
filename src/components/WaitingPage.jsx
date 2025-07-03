@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const WaitingPage = () => {
+const WaitingPage = ({onGoToNextButtonClick}) => {
   const [count, setCount] = useState(2);
 
   const purposeTags = [
@@ -44,15 +44,17 @@ const WaitingPage = () => {
   return (
     <div
       style={{
+        boxSizing: 'border-box',
+        width: '530px',
+        height: '100%',
         display: "flex",
         justifyContent: "center",
         padding: 32,
-        backgroundColor: "#f5f5f5",
       }}
     >
       <div
         style={{
-          width: 530,
+          width: '100%',
           backgroundColor: "#fff",
           borderRadius: 16,
           boxShadow: "0 0 0 1px #e0e0e0",
@@ -198,6 +200,7 @@ const WaitingPage = () => {
         {/* 다음 버튼 */}
         <div style={{ display: "flex", justifyContent: "center" }}>
           <button
+            onClick={onGoToNextButtonClick}
             style={{
               width: "100%",
               height: 48,

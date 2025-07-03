@@ -35,6 +35,8 @@ const WaitingPage2 = () => {
     <div
       style={{
         display: "flex",
+        width: '530px',
+        boxSizing: 'border-box',
         justifyContent: "center",
         padding: 32,
         backgroundColor: "#f5f5f5",
@@ -42,7 +44,7 @@ const WaitingPage2 = () => {
     >
       <div
         style={{
-          width: 530,
+          width: '100%',
           backgroundColor: "#fff",
           borderRadius: 16,
           boxShadow: "0 0 0 1px #e0e0e0",
@@ -124,7 +126,7 @@ const WaitingPage2 = () => {
             display: "flex",
             flexDirection: "column",
             gap: 10,
-            padding: "20px 70px",
+            padding: "20px 20px",
             // borderBottom: "1px solid #eee",
           }}
         >

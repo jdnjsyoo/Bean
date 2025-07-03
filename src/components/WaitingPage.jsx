@@ -36,6 +36,7 @@ const WaitingPage = () => {
         height: 5,
         width: "100%",
         backgroundColor: "#f6f6f6",
+        margin: "20px 0",
       }}
     />
   );
@@ -55,7 +56,7 @@ const WaitingPage = () => {
           backgroundColor: "#fff",
           borderRadius: 16,
           boxShadow: "0 0 0 1px #e0e0e0",
-          padding: 45,
+          padding: 50,
           display: "flex",
           flexDirection: "column",
           gap: 20,
@@ -63,7 +64,14 @@ const WaitingPage = () => {
       >
         {/* 방문 인원 */}
         <div style={{ textAlign: "left" }}>
-          <h3 style={{ fontSize: 20, fontWeight: "bold", margin: 0 }}>
+          <h3
+            style={{
+              fontSize: 20,
+              fontWeight: "bold",
+              margin: 0,
+              marginTop: 15,
+            }}
+          >
             방문 인원
           </h3>
           <p style={{ fontSize: 14, color: "#666", marginTop: 10 }}>

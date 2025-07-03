@@ -8,8 +8,9 @@ import Landing2 from "./pages/Landing/Landing2";
 import SignIn from "./pages/Login"; // Login/index.jsx의 컴포넌트
 import SignUp from "./pages/SignUp";
 import Search from "./pages/Search";
-import HomeDetail from './pages/Home_Detail';
+import HomeDetail from "./pages/Home_Detail";
 import WaitingPage from "./components/WaitingPage";
+import WaitingPage2 from "./components/WaitingPage2";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/search" element={<Search />} />
         <Route path="/detail" element={<HomeDetail />} />
         <Route path="/waiting" element={<WaitingPage />} />
+        <Route path="/waiting2" element={<WaitingPage2 />} />
       </Routes>
     </Router>
   );

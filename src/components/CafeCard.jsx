@@ -19,18 +19,22 @@ const CafeCard = ({
       style={{ display: "flex", flexDirection: "column", marginBottom: 32 }}
     >
       {/* 상단: 제목 + 빈자리 */}
-      <button onClick={onClick}>
+      <button
+        onClick={onClick}
+        style={{ backgroundColor: "#D8E4DA", border: "none", borderRadius: 5 }}
+      >
         <div
           style={{
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
+            backgroundColor: "#D8E4DA",
           }}
         >
-          <h3 style={{ fontWeight: "bold" }}>{name}</h3>
+          <h3 style={{ fontWeight: "bold", padding: "0px 10px" }}>{name}</h3>
           <div
             style={{
-              background: "#D8E4DA",
+              backgroundColor: "#D8E4DA",
               borderRadius: 10,
               padding: "4px 10px",
               fontWeight: "600",
